@@ -1,0 +1,15 @@
+{
+  "name": "Stitch Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:debian",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "onCreateCommand": "npm install -g @opencode/cli @openai/codex @anthropic-ai/claude-code @google/stitch",
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": { "label": "App (Vite dev server)", "onAutoForward": "openPreview" }
+  }
+}
